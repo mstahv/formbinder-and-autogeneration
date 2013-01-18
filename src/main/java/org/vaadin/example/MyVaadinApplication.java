@@ -85,7 +85,6 @@ public class MyVaadinApplication extends Application {
 
 	@Override
 	public void init() {
-		setTheme("example");
 		window = new Window("My Vaadin Application");
 		setMainWindow(window);
 
@@ -125,7 +124,7 @@ public class MyVaadinApplication extends Application {
 
 	}
 
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	private void editPojo(Object pojo) {
 		form.setItemDataSource(new BeanItem(pojo));
 		form.setVisible(true);
